@@ -45,12 +45,21 @@ body {
     grid-gap: 25px;
 }
 
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
 .numbers {
     text-align: center;
     border-radius: 5px;
     background: whitesmoke;
-    width: 35px;
-    height: 25px;
+    width: 55px;
+    height: 40px;
     padding: 10px;
     box-shadow: 0 2px grey, 0 5px rgba(0, 0, 0, 0.4);
 }
@@ -69,6 +78,8 @@ body {
 }
 
 .numbers:active {
-    background: rgba(255, 52, 52, 0.54);
+    box-shadow: 0 1px 1px 0 rgba(255, 52, 52, 0.54);,0 1px 2px 1px rgba(255, 52, 52, 0.54);;
 }
+
+
 
