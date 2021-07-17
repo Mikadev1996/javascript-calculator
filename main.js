@@ -75,22 +75,20 @@ functions.forEach((e) => {
 
             else if ((firstValue.length > 1) || (secondValue) || (symbol)) {
                 if (!symbol && !secondValue) {
-                    console.log("!symbol && !secondvalue",firstValue + symbol + secondValue)
                     firstValue = firstValue.slice(0, -1);
                     calcDisplay.textContent = firstValue;
+
                 } else if (!secondValue) {
-                    console.log("!secondvalue",firstValue + symbol + secondValue)
                     symbol= symbol.slice(0, -1);
                     calcDisplay.textContent = firstValue + symbol;
+
                 } else {
-                    console.log("else ",firstValue + symbol + secondValue)
                     secondValue = secondValue.slice(0, -1);
                     calcDisplay.textContent = firstValue + symbol + secondValue;
                 }
             }
 
             else {
-                console.log(firstValue + " " + symbol + " " + secondValue)
                 firstValue = "0";
                 calcDisplay.textContent = firstValue;
             }
