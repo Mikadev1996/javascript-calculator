@@ -66,26 +66,31 @@ functions.forEach((e) => {
         }
         else if (e.textContent === "DEL") {
             if (firstValue === "NaN" || firstValue === "Infinity") {
+                console.log("nan",firstValue + symbol + secondValue)
                 firstValue = "0";
                 secondValue = "";
                 symbol = "";
                 calcDisplay.textContent = firstValue;
             }
 
-            else if (firstValue.length > 1) {
+            else if ((firstValue.length > 1) || (secondValue) || (symbol)) {
                 if (!symbol && !secondValue) {
-                    firstValue= firstValue.slice(0, -1);
+                    console.log("!symbol && !secondvalue",firstValue + symbol + secondValue)
+                    firstValue = firstValue.slice(0, -1);
                     calcDisplay.textContent = firstValue;
                 } else if (!secondValue) {
+                    console.log("!secondvalue",firstValue + symbol + secondValue)
                     symbol= symbol.slice(0, -1);
                     calcDisplay.textContent = firstValue + symbol;
                 } else {
-                    secondValue= secondValue.slice(0, -1);
+                    console.log("else ",firstValue + symbol + secondValue)
+                    secondValue = secondValue.slice(0, -1);
                     calcDisplay.textContent = firstValue + symbol + secondValue;
                 }
             }
 
             else {
+                console.log(firstValue + " " + symbol + " " + secondValue)
                 firstValue = "0";
                 calcDisplay.textContent = firstValue;
             }
