@@ -37,7 +37,6 @@ let secondValue = "";
 
 buttons.forEach((e) => {
     e.addEventListener(("click"), () => {
-
         if (symbol === "") {
             if (firstValue === "NaN" || firstValue === "Infinity") {
                 firstValue = "";
