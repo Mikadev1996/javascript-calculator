@@ -39,7 +39,11 @@ buttons.forEach((e) => {
     e.addEventListener(("click"), () => {
 
         if (symbol === "") {
-            if (firstValue[0] === "0") {
+            if (firstValue === "NaN" || firstValue === "Infinity") {
+                firstValue = "";
+            }
+
+            else if (firstValue[0] === "0") {
                 firstValue = firstValue.slice(0, 0);
             }
             firstValue = firstValue + e.textContent
@@ -102,7 +106,7 @@ functions.forEach((e) => {
     })
 })
 
-function operate(inputSymbol) {
+function operate() {
     if (symbol === "+") {
         calcDisplay.textContent = add(parseFloat(firstValue), parseFloat(secondValue));
         firstValue = calcDisplay.textContent;
