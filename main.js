@@ -78,7 +78,7 @@ window.addEventListener("keydown", (e) => {
             useSymbols("=");
             break;
         case "/":
-            useSymbols("/");
+            useSymbols("÷");
             break;
         case "+":
             useSymbols("+");
